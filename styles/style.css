@@ -6,6 +6,8 @@
     --selectoin-color: #2196F3;
     --button-color-hover-focus: #188CE8;
     --footer-heder-color: #2F303A;
+    --duration: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -143,6 +145,7 @@ img {
 .auth-item-tel:focus,
 .auth-item-tel:hover {
     color: var(--selectoin-color);
+    transition: var(--duration) var(--timing-function);
 }
 
 .auth-list {
@@ -237,17 +240,26 @@ img {
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: var(--button-color-hover-focus);
+    transition: var(--duration) var(--timing-function);
 }
 
 /* MODAL FORM  */
-/* .backdrop {
+.backdrop {
     background: rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-} */
+    transition: var(--duration) var(--timing-function);
+
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 
 .modal-wrapper {
     position: absolute;
@@ -258,9 +270,14 @@ img {
     width: 528px;
     height: 581px;
     border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: var(--duration) var(--timing-function);
+
 }
 
-.modal-btn {
+.modal-btn-close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -496,11 +513,13 @@ img {
 .team-icon-item:hover .team-icon-link {
     background-color: #2196F3;
     fill: #FFFFFF;
+    transition: var(--duration) var(--timing-function);
 }
 
 .team-icon-link:focus {
     background-color: #2196F3;
     fill: #FFFFFF;
+    transition: var(--duration) var(--timing-function);
 }
 
 /*#endregion TEAM*/
@@ -540,6 +559,7 @@ img {
 .link-client:focus {
     border: 1px solid #2196F3;
     fill: #188CE8;
+    transition: var(--duration) var(--timing-function);
 }
 
 /*#endregion*/
@@ -587,6 +607,7 @@ img {
 .footer-item:hover,
 .footer-item:focus {
     color: #2196F3;
+    transition: var(--duration) var(--timing-function);
 }
 
 .footer-site {
@@ -650,6 +671,7 @@ img {
 .footer-icon-link:hover,
 .footer-icon-link:focus {
     background-color: var(--selectoin-color);
+    transition: var(--duration) var(--timing-function);
 }
 
 /*#endregion FOOTER SITE*/
@@ -696,7 +718,8 @@ img {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
-    /* border-radius: 4px; */
+    border-radius: 4px;
+    transition: var(--duration) var(--timing-function);
 }
 
 .project-list {
@@ -708,6 +731,8 @@ img {
 .project-item {
     margin-right: 30px;
     margin-bottom: 30px;
+    cursor: pointer;
+
 }
 
 .project-item:nth-child(3n) {
@@ -718,16 +743,12 @@ img {
     margin-bottom: 0;
 }
 
-/* .project-item:hover,
-.project-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16)
-} */
-
-.project-item {
-    cursor: pointer;
+.project-item:hover .text-img-conteiner,
+.project-item:focus .text-img-conteiner {
+    transform: translateY(0);
+    transition: var(--duration) var(--timing-function);
 }
+
 
 .project-link {
     display: block;
@@ -736,12 +757,36 @@ img {
 
 .project-link:hover,
 .project-link:focus {
+    transition: var(--duration) var(--timing-function);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16)
 }
 
+/* выезд синего фона */
+.image-conteiner {
+    position: relative;
+    overflow: hidden;
+}
 
+.text-img-conteiner {
+    position: absolute;
+    transform: translateY(100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background: rgba(33, 150, 243, 0.9);
+    transition: var(--duration) var(--timing-function);
+
+
+}
 
 .name-project {
     color: #212121;
