@@ -117,6 +117,7 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    position: relative;
 
     transition: color var(--duration) var(--timing-function);
 }
@@ -134,11 +135,6 @@ img {
 .studia,
 .portfolio {
     color: #2196F3;
-}
-
-
-.navigation-item {
-    position: relative;
 }
 
 .current::after {
@@ -176,6 +172,9 @@ img {
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
+
+    transition: color var(--duration) var(--timing-function);
+
 }
 
 .auth-item-mail-icon,
@@ -268,7 +267,7 @@ img {
 }
 
 .backdrop.is-hidden .modal-wrapper {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%)scale(0.5);
 }
 
 .modal-wrapper {
@@ -516,9 +515,10 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    background-color: #FFFFFF;
     fill: #AFB1B8;
-    transition: fill var(--duration) var(--timing-function);
-    ;
+    transition: fill var(--duration) var(--timing-function),
+        background-color var(--duration) var(--timing-function);
 }
 
 
@@ -667,8 +667,6 @@ img {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-
 }
 
 .footer-social-item:not(:last-child) {
@@ -682,8 +680,9 @@ img {
     justify-content: center;
     align-items: center;
     fill: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    transition: fill var(--duration) var(--timing-function);
+    transition: background-color var(--duration) var(--timing-function);
 
 }
 
@@ -766,12 +765,17 @@ img {
     margin-bottom: 0;
 }
 
-.project-item:hover .text-img-conteiner,
-.project-item:focus .text-img-conteiner {
+.project-link:hover .text-img-conteiner,
+.project-link:focus .text-img-conteiner {
     transform: translateY(0);
-
 }
 
+.project-link:hover,
+.project-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .project-link {
     display: block;
@@ -779,13 +783,7 @@ img {
     transition: box-shadow var(--duration) var(--timing-function);
 }
 
-.project-link:hover,
-.project-link:focus {
 
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16)
-}
 
 /* выезд синего фона */
 .image-conteiner {
@@ -808,6 +806,7 @@ img {
     color: #FFFFFF;
     background: rgba(33, 150, 243, 0.9);
     transition: var(--duration) var(--timing-function);
+
 }
 
 .name-project {
