@@ -72,6 +72,7 @@ img {
     border-bottom: 1px solid #ECECEC;
 }
 
+/* логотип */
 .logo {
     color: var(--selectoin-color);
 
@@ -85,15 +86,16 @@ img {
     letter-spacing: 0.03em;
 }
 
+.web {
+    color: #212121;
+}
+
 .header-conteiner {
     display: flex;
     align-items: center;
 }
 
-.web {
-    color: #212121;
-}
-
+/* навигация */
 .navigation-list {
     display: flex;
     align-items: center;
@@ -104,7 +106,7 @@ img {
 }
 
 .navigation-item-link {
-    color: #212121;
+    color: var(--main-color);
 
     display: block;
     padding-top: 32px;
@@ -115,6 +117,18 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    transition: color var(--duration) var(--timing-function);
+}
+
+.navigation-item-link:hover,
+.navigation-item-link:focus,
+.auth-item-mail:hover,
+.auth-item-mail:focus,
+.auth-item-tel:focus,
+.auth-item-tel:hover {
+    color: var(--selectoin-color);
+
 }
 
 .studia,
@@ -136,18 +150,10 @@ img {
     height: 4px;
     background-color: #2196F3;
     border-radius: 2px;
+
 }
 
-.navigation-item-link:hover,
-.navigation-item-link:focus,
-.auth-item-mail:hover,
-.auth-item-mail:focus,
-.auth-item-tel:focus,
-.auth-item-tel:hover {
-    color: var(--selectoin-color);
-    transition: var(--duration) var(--timing-function);
-}
-
+/* почта,телефон */
 .auth-list {
     display: flex;
     margin-left: auto;
@@ -181,6 +187,7 @@ img {
 /*#endregion HEADER*/
 
 /*#region HERO SECTION*/
+
 .hero-section {
     background: var(--footer-heder-color);
     background: linear-gradient(rgba(47, 48, 58, 0.4),
@@ -197,8 +204,6 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
-
 }
 
 .hero-title {
@@ -217,6 +222,7 @@ img {
     margin-bottom: 30px;
 }
 
+/* Кнопка */
 .hero-btn {
     font-family: inherit;
 
@@ -240,7 +246,7 @@ img {
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: var(--button-color-hover-focus);
-    transition: var(--duration) var(--timing-function);
+
 }
 
 /* MODAL FORM  */
@@ -251,14 +257,18 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: var(--duration) var(--timing-function);
-
+    transition: opacity var(--duration) var(--timing-function),
+        visability var(--duration) var(--timing-function);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.backdrop.is-hidden .modal-wrapper {
+    transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal-wrapper {
@@ -273,8 +283,7 @@ img {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: var(--duration) var(--timing-function);
-
+    transition: transform var(--duration) var(--timing-function);
 }
 
 .modal-btn-close {
@@ -287,7 +296,7 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
-    padding: 0px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -482,6 +491,7 @@ img {
     margin-bottom: 16px;
 }
 
+/* иконки соц-сетей */
 .team-icon-list {
     display: flex;
     justify-content: center;
@@ -507,19 +517,21 @@ img {
     align-items: center;
     border-radius: 50%;
     fill: #AFB1B8;
+    transition: fill var(--duration) var(--timing-function);
+    ;
 }
 
 
 .team-icon-item:hover .team-icon-link {
     background-color: #2196F3;
     fill: #FFFFFF;
-    transition: var(--duration) var(--timing-function);
+
 }
 
 .team-icon-link:focus {
     background-color: #2196F3;
     fill: #FFFFFF;
-    transition: var(--duration) var(--timing-function);
+
 }
 
 /*#endregion TEAM*/
@@ -553,13 +565,15 @@ img {
     fill: #AFB1B8;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    transition: border var(--duration) var(--timing-function),
+        fill var(--duration) var(--timing-function);
 }
 
 .link-client:hover,
 .link-client:focus {
     border: 1px solid #2196F3;
     fill: #188CE8;
-    transition: var(--duration) var(--timing-function);
+
 }
 
 /*#endregion*/
@@ -602,12 +616,14 @@ img {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
+    transition: color var(--duration) var(--timing-function);
+    ;
 }
 
 .footer-item:hover,
 .footer-item:focus {
     color: #2196F3;
-    transition: var(--duration) var(--timing-function);
+
 }
 
 .footer-site {
@@ -652,6 +668,7 @@ img {
     height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+
 }
 
 .footer-social-item:not(:last-child) {
@@ -666,12 +683,14 @@ img {
     align-items: center;
     fill: #FFFFFF;
     border-radius: 50%;
+    transition: fill var(--duration) var(--timing-function);
+
 }
 
 .footer-icon-link:hover,
 .footer-icon-link:focus {
     background-color: var(--selectoin-color);
-    transition: var(--duration) var(--timing-function);
+
 }
 
 /*#endregion FOOTER SITE*/
@@ -693,6 +712,10 @@ img {
     border-radius: 4px;
 
     padding: 6px 22px;
+
+    transition: color var(--duration) var(--timing-function),
+        background-color var(--duration) var(--timing-function),
+        box-shadow var(--duration) var(--timing-function);
 }
 
 .filter-list {
@@ -719,7 +742,7 @@ img {
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    transition: var(--duration) var(--timing-function);
+
 }
 
 .project-list {
@@ -746,18 +769,19 @@ img {
 .project-item:hover .text-img-conteiner,
 .project-item:focus .text-img-conteiner {
     transform: translateY(0);
-    transition: var(--duration) var(--timing-function);
+
 }
 
 
 .project-link {
     display: block;
     text-decoration: none;
+    transition: box-shadow var(--duration) var(--timing-function);
 }
 
 .project-link:hover,
 .project-link:focus {
-    transition: var(--duration) var(--timing-function);
+
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16)
@@ -784,8 +808,6 @@ img {
     color: #FFFFFF;
     background: rgba(33, 150, 243, 0.9);
     transition: var(--duration) var(--timing-function);
-
-
 }
 
 .name-project {
