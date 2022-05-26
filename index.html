@@ -79,8 +79,45 @@
             Заказать услугу
           </button>
         </div>
+        <!-- модальное окно -->
         <div class="backdrop is-hidden" data-modal>
           <div class="modal-wrapper">
+            <b>Оставьте свои данные, мы вам перезвоним</b>
+            <form class="hero-modal-form" name="hero-form">
+              <label class="hero-modal-name"
+                >Имя
+                <input type="text" name="text"/>
+              </label>
+
+              <label class="hero-modal-tel"
+                >Телефон
+                <input type="tel" name="tel" />
+              </label>
+
+              <label class="hero-modal-mail"
+                >Почта
+                <input type="email" name="mail" />
+              </label>
+
+              <label class="hero-modal-comment"
+                >Комментарий
+                <textarea
+                  name="comment"
+                  cols="30"
+                  rows="10"
+                  placeholder="Введите текст"
+                ></textarea>
+              </label>
+
+              <label class="hero-modal-active">
+                <input type="checkbox" />
+                Соглашаюсь с рассылкой и принимаю
+                <span> Условия договора</span>
+              </label>
+
+              <button class="hero-modal-button" type="submit">Отправить</button>
+            </form>
+
             <button class="modal-btn-close" data-modal-close>
               <svg width="11" height="11">
                 <use href="./images/sprite.svg#icon-Vectorr"></use>
@@ -469,6 +506,19 @@
             </li>
           </ul>
         </div>
+        <!-- футер форма -->
+        <form class="footer-form-group" name="footer-form">
+          <p>Подпишитесь на рассылку</p>
+          <label class="footer-group">
+            <input
+              class="mail-group"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+          </label>
+          <button type="submit">Подписаться</button>
+        </form>
       </div>
     </footer>
 
