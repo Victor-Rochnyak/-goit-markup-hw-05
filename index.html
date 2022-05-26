@@ -84,37 +84,47 @@
           <div class="modal-wrapper">
             <b>Оставьте свои данные, мы вам перезвоним</b>
             <form class="hero-modal-form" name="hero-form">
-              <label class="hero-modal-name"
-                >Имя
-                <input type="text" name="text"/>
-              </label>
+              <div class="hero-modal-name">
+                <label class="hero-form"
+                  >Имя
+                  <input class="hero-form" type="text" name="text" />
+                </label>
+              </div>
 
-              <label class="hero-modal-tel"
-                >Телефон
-                <input type="tel" name="tel" />
-              </label>
+              <div class="hero-modal-tel">
+                <label>
+                  Телефон
+                  <input type="tel" name="tel" />
+                </label>
+              </div>
 
-              <label class="hero-modal-mail"
-                >Почта
-                <input type="email" name="mail" />
-              </label>
+              <div class="hero-modal-mail">
+                <label>
+                  Почта
+                  <input type="email" name="mail" />
+                </label>
+              </div>
 
-              <label class="hero-modal-comment"
-                >Комментарий
-                <textarea
-                  name="comment"
-                  cols="30"
-                  rows="10"
-                  placeholder="Введите текст"
-                ></textarea>
-              </label>
+              <div class="hero-modal-comment">
+                <label>
+                  Комментарий
+                  <textarea
+                    name="comment"
+                    cols="30"
+                    rows="10"
+                    placeholder="Введите текст"
+                  >
+                  </textarea>
+                </label>
+              </div>
 
-              <label class="hero-modal-active">
-                <input type="checkbox" />
-                Соглашаюсь с рассылкой и принимаю
-                <span> Условия договора</span>
-              </label>
-
+              <div class="hero-modal-active">
+                <label>
+                  <input type="checkbox" />
+                  Соглашаюсь с рассылкой и принимаю
+                  <span> Условия договора</span>
+                </label>
+              </div>
               <button class="hero-modal-button" type="submit">Отправить</button>
             </form>
 
@@ -508,8 +518,9 @@
         </div>
         <!-- футер форма -->
         <form class="footer-form-group" name="footer-form">
+          <div class="footer-group">
           <p>Подпишитесь на рассылку</p>
-          <label class="footer-group">
+          <label>
             <input
               class="mail-group"
               type="email"
@@ -518,6 +529,7 @@
             />
           </label>
           <button type="submit">Подписаться</button>
+        </div>
         </form>
       </div>
     </footer>
