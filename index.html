@@ -84,11 +84,11 @@
           <div class="modal-wrapper">
             <!--Форма -->
             <b class="title-form">Оставьте свои данные, мы вам перезвоним</b>
-            <form class="hero-modal-form" name="hero-form" method="">
+            <form class="hero-modal-form" name="hero-form">
               <!-- Данные пользователя -->
               <label class="form-modal-group">
                 <span class="form-modal-label">Имя</span>
-                <input class="input-modal-form" type="text" name="user-name" />
+                <input class="input-modal-form" type="text" name="user-name"/>
          
                 <svg class="form-modal-icon" width="18" height="18">
                   <use href="./images/sprite.form.svg#icon-person-black"></use>
@@ -97,7 +97,7 @@
 
               <label class="form-modal-group">
                 <span class="form-modal-label">Телефон</span>
-                <input class="input-modal-form" type="phone" name="user-phone" />
+                <input class="input-modal-form" type="tel" name="user-tel"/>
 
                 <svg class="form-modal-icon" width="18" height="18">
                   <use href="./images/sprite.form.svg#icon-phone-black"></use>
@@ -106,9 +106,9 @@
 
               <label class="form-modal-group">
                 <span class="form-modal-label">Почта</span>
-                <input class="input-modal-form" type="mail" name="user-mail" />
+                <input class="input-modal-form" type="email" name="user-email"/>
                 <svg class="form-modal-icon" width="18" height="18">
-                  <use class="form-modal-icon" href="./images/sprite.form.svg#icon-email-black"></use>
+                  <use href="./images/sprite.form.svg#icon-email-black"></use>
                 </svg>
               </label>
               <!-- коментарий -->
@@ -131,7 +131,7 @@
               <button class="hero-modal-button hero-btn" type="submit">Отправить</button>
             </form>
             <button class="modal-btn-close" data-modal-close>
-              <svg width="11" height="11">
+              <svg class="close-icon" width="11" height="11">
                 <use href="./images/sprite.svg#icon-Vectorr"></use>
               </svg>
             </button>
@@ -469,6 +469,7 @@
             </ul>
           </address>
         </div>
+        <!-- футер соц-сети -->
         <div class="footer-messenger">
           <h2 class="footer-join">Присоединяйтесь</h2>
           <ul class="footer-social-list">
@@ -503,18 +504,18 @@
           </ul>
         </div>
         <!-- футер форма -->
-        <form class="footer-form-group" name="footer-form">
+        <form class="footer-form-group " name="footer-form">
           <div class="footer-group">
-            <p>Подпишитесь на рассылку</p>
+            <p class="footer-form-text">Подпишитесь на рассылку</p>
             <label>
               <input
-                class="mail-group"
+                class="footer-mail-group"
                 type="email"
                 name="email"
                 placeholder="E-mail"
               />
             </label>
-            <button type="submit">Подписаться</button>
+            <button class="footer-btn" type="submit">Подписаться</button>
           </div>
         </form>
       </div>
