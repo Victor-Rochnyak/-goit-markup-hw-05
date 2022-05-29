@@ -304,6 +304,10 @@ img {
 }
 
 /* Форма-Герой */
+.hero-modal-form {
+    width: 448px;
+}
+
 .title-form {
   display: inline-block;
   margin-bottom: 12px;
@@ -316,11 +320,6 @@ img {
   color: #212121;
 }
 
-.hero-modal-form {
-  width: 448px;
-
-}
-
 .form-modal-group,
 .form-coments,
 .form-policy-group {
@@ -330,14 +329,6 @@ img {
 
 .form-coments {
   margin-bottom: 20px;
-}
-
-.form-policy-group {
-  display: flex;
-  margin-left: 13px;
-  margin-bottom: 30px;
-  width: 423px;
-  align-items: center;
 }
 
 .form-modal-group {
@@ -367,9 +358,8 @@ img {
 }
 
 .input-modal-form:hover,
-.input-modal-form:focus,
-.textarea:hover,
-.textarea:focus {
+.input-modal-form:focus
+{
   border-color: #188ce8;
 }
 .input-modal-form:focus + .form-modal-icon {
@@ -382,7 +372,7 @@ img {
   left: 12px;
   transition: fill var(--duration) var(--timing-function);
 }
-
+/* Коментарий */
 .textarea {
   outline: transparent;
   padding: 12px 16px;
@@ -404,12 +394,26 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.textarea:hover,
+.textarea:focus {
+  border-color: #188ce8;
+}
+
 /* Checkbox style */
+
+.form-policy-group {
+    display: flex;
+    margin-left: 13px;
+    margin-bottom: 30px;
+    width: 423px;
+    align-items: center;
+}
 
 .custom-checkbox:hover
 {
   border-color: #2196f3;
 }
+
 .check-box:focus + .custom-checkbox{
     border-color: #2196f3;
 }
@@ -432,7 +436,7 @@ img {
     background-color var(--duration) var(--timing-function);
 }
 
-.checkbox:checked + .custom-checkbox {
+.check-box:checked + .custom-checkbox {
   background-color: #188ce8;
   border-color: #188ce8;
 
