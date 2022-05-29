@@ -272,8 +272,8 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   background-color: #ffffff;
+  padding: 40px;
   width: 528px;
-  height: 581px;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -297,17 +297,16 @@ img {
 }
 .modal-btn-close:hover .close-icon,
 .modal-btn-close:focus .close-icon {
-  fill:#2196F3;
+  fill: #2196f3;
 }
-.close-icon{
-transition: var(--duration) var(--timing-function);
-
+.close-icon {
+  transition: var(--duration) var(--timing-function);
 }
 
 /* Форма-Герой */
 .title-form {
   display: inline-block;
-  margin: 48px 40px 12px 40px;
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
@@ -319,8 +318,7 @@ transition: var(--duration) var(--timing-function);
 
 .hero-modal-form {
   width: 448px;
-  margin-right: auto;
-  margin-left: auto;
+
 }
 
 .form-modal-group,
@@ -363,14 +361,16 @@ transition: var(--duration) var(--timing-function);
   padding: 12px 0px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  
+  outline: transparent;
   cursor: pointer;
-  transition: border-color var(--duration) var(--timing-function);;
+  transition: border-color var(--duration) var(--timing-function);
 }
 
-
-.input-modal-form:hover, .textarea:hover{
-    border-color:#188ce8;
+.input-modal-form:hover,
+.input-modal-form:focus,
+.textarea:hover,
+.textarea:focus {
+  border-color: #188ce8;
 }
 .input-modal-form:focus + .form-modal-icon {
   fill: var(--selectoin-color);
@@ -380,10 +380,11 @@ transition: var(--duration) var(--timing-function);
   position: absolute;
   top: 50%;
   left: 12px;
-  transition: fill var(--duration) var(--timing-function);;
+  transition: fill var(--duration) var(--timing-function);
 }
 
 .textarea {
+  outline: transparent;
   padding: 12px 16px;
   width: 100%;
   height: 120px;
@@ -401,16 +402,18 @@ transition: var(--duration) var(--timing-function);
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
-  
 }
 
 /* Checkbox style */
 
-.custom-checkbox:hover, 
-.custom-checkbox:focus{
-    border-color:#2196f3;
+.custom-checkbox:hover
+{
+  border-color: #2196f3;
 }
-.checkbox {
+.check-box:focus + .custom-checkbox{
+    border-color: #2196f3;
+}
+.check-box {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -424,10 +427,9 @@ transition: var(--duration) var(--timing-function);
   border: 2px solid #212121;
   margin-right: 7px;
   cursor: pointer;
-  outline: transparent;
   transition: border-color var(--duration) var(--timing-function),
-  background-image var(--duration) var(--timing-function),
-  background-color var(--duration) var(--timing-function);
+    background-image var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function);
 }
 
 .checkbox:checked + .custom-checkbox {
@@ -444,16 +446,43 @@ transition: var(--duration) var(--timing-function);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.02em;
 
   color: #757575;
 }
 
 .checkbox-link {
-  color:#2196F3;
+  color: #2196f3;
 }
-.checkbox-link{
-transition: color var(--duration) var(--timing-function);;
+.checkbox-link {
+  transition: color var(--duration) var(--timing-function);
 }
+
+/* кнопка */
+.form-modal-button {
+    font-family: inherit;
+  
+    color: #ffffff;
+  
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    background-color: var(--selectoin-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  
+    cursor: pointer;
+    border: none;
+  
+    min-width: 200px;
+    padding: 10px 32px;
+  }
+  
+  .form-modal-button:hover,
+  .form-modal-button:focus {
+    background-color: var(--button-color-hover-focus);
+  }
 
 /*#endregion HERO SECTION*/
 
