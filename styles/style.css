@@ -253,7 +253,7 @@ img {
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--duration) var(--timing-function),
-    visability var(--duration) var(--timing-function);
+    visi    bility var(--duration) var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -424,7 +424,6 @@ img {
 }
 
 .custom-checkbox {
-  display: inline-block;
   width: 16px;
   height: 15px;
   border-radius: 2px;
@@ -481,6 +480,7 @@ img {
   
     min-width: 200px;
     padding: 10px 32px;
+    transition: background-color var(--duration) var(--timing-function);
   }
   
   .form-modal-button:hover,
