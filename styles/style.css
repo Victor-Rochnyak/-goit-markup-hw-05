@@ -72,6 +72,11 @@ img {
 }
 
 /* логотип */
+.header-conteiner {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   color: var(--selectoin-color);
 
@@ -85,26 +90,26 @@ img {
   letter-spacing: 0.03em;
 }
 
-.web {
+.logo__web {
   color: #212121;
 }
 
-.header-conteiner {
-  display: flex;
-  align-items: center;
-}
+
 
 /* навигация */
-.navigation-list {
+.nav__list {
   display: flex;
   align-items: center;
 }
 
-.navigation-list .navigation-item + .navigation-item {
-  margin-left: 50px;
+.nav__item{
+  margin-right: 50px;
+}
+.nav__item:last-child{
+  margin-right: 0px;
 }
 
-.navigation-item-link {
+.nav__link {
   color: var(--main-color);
 
   display: block;
@@ -121,12 +126,9 @@ img {
   transition: color var(--duration) var(--timing-function);
 }
 
-.navigation-item-link:hover,
-.navigation-item-link:focus,
-.auth-item-mail:hover,
-.auth-item-mail:focus,
-.auth-item-tel:focus,
-.auth-item-tel:hover {
+.nav__link:hover,
+.nav__link:focus
+ {
   color: var(--selectoin-color);
 }
 
@@ -147,17 +149,20 @@ img {
 }
 
 /* почта,телефон */
-.auth-list {
+.auth__list {
   display: flex;
   margin-left: auto;
 }
 
-.auth-list .auth-item + .auth-item {
-  margin-left: 50px;
+.auth__item {
+  margin-right: 50px;
+}
+.auth__item:last-child{
+  margin-right: 0px;
 }
 
-.auth-item-tel,
-.auth-item-mail {
+.auth__tel,
+.auth__mail {
   color: #757575;
 
   font-weight: 500;
@@ -173,10 +178,17 @@ img {
   transition: color var(--duration) var(--timing-function);
 }
 
-.auth-item-mail-icon,
-.auth-item-tel-icon {
+.auth__icon,
+.auth__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.auth__mail:hover,
+.auth__mail:focus,
+.auth__tel:focus,
+.auth__tel:hover{
+  color: var(--selectoin-color);
 }
 
 /*#endregion HEADER*/
@@ -499,17 +511,17 @@ img {
   display: flex;
 }
 
-.specifics-item {
+.specifics-list__item {
   margin-right: 30px;
   width: 270px;
 }
 
-.specifics-item:last-child {
+.specifics-list__item:last-child {
   margin-right: 0;
 }
 
 /* раздел с особеностями */
-.specifics-item::before {
+.specifics-list__item::before {
   display: block;
   content: "";
   height: 120px;
@@ -519,37 +531,23 @@ img {
   background-position: center;
 }
 
-.icon-antena::before {
+.specifics-list--icon-antena::before {
   background-image: url(../images/icons/antenna.svg);
 }
 
-.icon-clock::before {
+.specifics-list--icon-clock::before {
   background-image: url(../images/icons/clock.svg);
 }
 
-.icon-diagrama::before {
+.specifics-list--icon-diagrama::before {
   background-image: url(../images/icons/diagram.svg);
 }
 
-.icon-astronaut::before {
+.specifics-list--icon-astronaut::before {
   background-image: url(../images/icons/astronaut.svg);
 }
 
-/* .specifics-pictures {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 270px;
-    height: 120px;
-    left: 215px;
-    top: 774px;
-    background: #F5F4FA;
-    border-radius: 4px;
-    margin-bottom: 30px;
-
-} */
-
-.specifics-title {
+.specifics-list__title {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
@@ -558,7 +556,7 @@ img {
   margin-bottom: 10px;
 }
 
-.specificts-text {
+.specifics-list__text {
   color: #757575;
 
   line-height: 1.71;
@@ -582,11 +580,11 @@ img {
   display: flex;
 }
 
-.development-item:not(:last-child) {
+.development-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.development-item {
+.development-list__item {
   position: relative;
 }
 
@@ -760,6 +758,11 @@ img {
   background-color: #2f303a;
 }
 
+.footer-site {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-section {
   display: flex;
   align-items: baseline;
@@ -769,11 +772,14 @@ img {
   margin-right: 70px;
 }
 
-.logo-footer {
+.footer__logo {
+  display: block;
+
+  margin-bottom: 20px;
   margin-right: 0;
 }
 
-.web-footer {
+.footer__web {
   color: #ffffff;
 }
 
@@ -784,7 +790,7 @@ img {
   color: #ffffff;
 }
 
-.footer-item {
+.address-footer__item {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
@@ -792,28 +798,16 @@ img {
   transition: color var(--duration) var(--timing-function);
 }
 
-.footer-item:hover,
-.footer-item:focus {
+.address-footer__item:hover,
+.address-footer__item:focus {
   color: #2196f3;
 }
 
-.footer-site {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.footer {
-  display: block;
-
-  margin-bottom: 20px;
-  margin-right: 0;
-}
-
-.addres-text {
+.address-footer__text {
   margin-bottom: 9px;
 }
 
-.footer-link:not(:last-child) {
+.address-footer__link:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -822,7 +816,7 @@ img {
   margin-right: 93px;
 }
 
-.footer-join {
+.footer-messenger__join {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -834,21 +828,21 @@ img {
   margin-bottom: 20px;
 }
 
-.footer-social-list {
+.footer-social {
   display: flex;
 }
 
-.footer-social-item {
+.footer-social__item {
   width: 44px;
   height: 44px;
   border-radius: 50%;
 }
 
-.footer-social-item:not(:last-child) {
+.footer-social__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-icon-link {
+.footer-social__link {
   width: 100%;
   height: 100%;
   display: flex;
@@ -860,14 +854,14 @@ img {
   transition: background-color var(--duration) var(--timing-function);
 }
 
-.footer-icon-link:hover,
-.footer-icon-link:focus {
+.footer-social__link:hover,
+.footer-social__link:focus {
   background-color: var(--selectoin-color);
 }
 
 /* футер рассылка */
 
-.footer-form-text {
+.footer-group__text {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -880,7 +874,7 @@ img {
   margin-bottom: 20px;
 }
 
-.footer-mail-group {
+.footer-group__mail {
   margin-right: 12px;
   width: 358px;
   height: 50px;
@@ -893,7 +887,7 @@ img {
   color: #ffffff;
 }
 
-.footer-mail-group::placeholder {
+.footer-group__mail::placeholder {
   font-size: 16px;
   line-height: 1.25;
   align-items: center;
@@ -902,7 +896,7 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-btn {
+.footer-group__btn {
   display: inline-flex;
   align-items: center;
 
@@ -923,12 +917,12 @@ img {
   padding: 10px 32px;
 }
 
-.footer-btn:hover,
-.footer-btn:focus {
+.footer-group__btn:hover,
+.footer-group__btn:focus {
   background-color: var(--button-color-hover-focus);
 }
 
-.footer-btn::after {
+.footer-group__btn::after {
   content: "";
   display: inline-block;
   background-image: url(../images/icons/icon-send.svg);

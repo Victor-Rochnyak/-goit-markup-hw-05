@@ -28,39 +28,39 @@
 
     <header class="header-section">
       <div class="conteiner header-conteiner">
-        <a class="logo header" href="index.html" lang="en">
-          Web<span class="web">Studio</span></a
+        <a class="logo logo--header" href="index.html" lang="en">
+          Web<span class="logo__web">Studio</span></a
         >
-        <nav>
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-item-link current" href="./index.html"
+        <nav class="nav">
+          <ul class="nav__list ">
+            <li class="nav__item">
+              <a class="nav__link current" href="./index.html"
                 >Студия</a
               >
             </li>
-            <li class="navigation-item">
-              <a class="navigation-item-link" href="./portfolio.html"
+            <li class="nav__item">
+              <a class="nav__link" href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
-            <li class="navigation-item">
-              <a class="navigation-item-link" href="">Контакты</a>
+            <li class="nav__item">
+              <a class="nav__link" href="">Контакты</a>
             </li>
           </ul>
         </nav>
 
-        <ul class="auth-list">
-          <li class="auth-item">
-            <a class="auth-item-mail" href="mailto:info@devstudio.com">
-              <svg class="auth-item-mail-icon" width="16" height="12">
+        <ul class="auth__list">
+          <li class="auth__item">
+            <a class="auth__mail" href="mailto:info@devstudio.com">
+              <svg class="auth__icon" width="16" height="12">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="auth-item">
-            <a class="auth-item-tel" href="tel:+380961111111">
-              <svg class="auth-item-tel-icon" width="10" height="16">
+          <li class="auth__item">
+            <a class="auth__tel" href="tel:+380961111111">
+              <svg class="auth__icon" width="10" height="16">
                 <use href="./images/sprite.svg#icon-Vector"></use>
               </svg>
               +38 096 111 11 11
@@ -72,7 +72,7 @@
 
     <main>
       <!-- hero section -->
-      <section class="hero-section section hero-fon">
+      <section class="hero-section section ">
         <div class="conteiner">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button class="hero-btn" type="button" data-modal-open>
@@ -144,35 +144,35 @@
       <section class="specifics-section section">
         <div class="conteiner">
           <h2 class="visually-hidden">Наши особенности</h2>
-          <ul class="specifics-list list">
-            <li class="specifics-item icon-antena">
+          <ul class="specifics-list">
+            <li class="specifics-list__item specifics-list--icon-antena">
              
-              <h3 class="specifics-title">Внимание к деталям</h3>
-              <p class="specificts-text">
+              <h3 class="specifics-list__title">Внимание к деталям</h3>
+              <p class="specifics-list__text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li class="specifics-item icon-clock">
+            <li class="specifics-list__item specifics-list--icon-clock">
              
-              <h3 class="specifics-title">Пунктуальность</h3>
-              <p class="specificts-text">
+              <h3 class="specifics-list__title">Пунктуальность</h3>
+              <p class="specifics-list__text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="specifics-item icon-diagrama">
+            <li class="specifics-list__item specifics-list--icon-diagrama">
              
-              <h3 class="specifics-title">Планирование</h3>
-              <p class="specificts-text">
+              <h3 class="specifics-list__title">Планирование</h3>
+              <p class="specifics-list__text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li class="specifics-item icon-astronaut">
+            <li class="specifics-list__item specifics-list--icon-astronaut">
              
-              <h3 class="specifics-title">Современные технологии</h3>
-              <p class="specificts-text">
+              <h3 class="specifics-list__title">Современные технологии</h3>
+              <p class="specifics-list__text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -185,7 +185,7 @@
         <div class="conteiner">
           <h2 class="devefelopment-title">Чем мы занимаемся</h2>
           <ul class="development-list">
-            <li class="development-item">
+            <li class="development-list__item">
               <img
                 src="./images/development-jpg/img-3.jpg"
                 alt="печатает код"
@@ -196,7 +196,7 @@
                 <p class="name-development">Десктопные приложения</p>
               </div>
             </li>
-            <li class="development-item">
+            <li class="development-list__item">
               <img
                 src="./images/development-jpg/img-1.jpg"
                 alt="рисует макет телефона на ноутбуке"
@@ -207,7 +207,7 @@
                 <p class="name-development">Мобильные приложения</p>
               </div>
             </li>
-            <li class="development-item">
+            <li class="development-list__item">
               <img
                 src="./images/development-jpg/img-2.jpg"
                 alt="рисует на планшете узоры"
@@ -452,19 +452,19 @@
     <footer class="footer-site">
       <div class="conteiner footer-section">
         <div class="footer-left">
-          <a href="index.html" class="logo footer" lang="en">
-            Web<span class="web-footer">Studio</span></a
+          <a href="index.html" class="logo footer__logo" lang="en">
+          Web<span class="footer__web">Studio</span></a
           >
           <address class="address-footer">
-            <p class="addres-text">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="footer-list">
-              <li class="footer-link">
-                <a class="footer-item" href="mailto:info@example.com"
+            <p class="address-footer__text">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="address-footer__list">
+              <li class="address-footer__link">
+                <a class="address-footer__item" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
-              <li class="footer-link">
-                <a class="footer-item" href="tel:+380991111111"
+              <li class="address-footer__link">
+                <a class="address-footer__item" href="tel:+380991111111"
                   >+38 099 111 11 11</a
                 >
               </li>
@@ -473,32 +473,32 @@
         </div>
         <!-- футер соц-сети -->
         <div class="footer-messenger">
-          <h2 class="footer-join">Присоединяйтесь</h2>
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a class="footer-icon-link" href="">
-                <svg class="footer-link-social" width="20" height="20">
+          <h2 class="footer-messenger__join">Присоединяйтесь</h2>
+          <ul class="footer-social">
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="">
+                <svg class="footer-social__icon" width="20" height="20">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a class="footer-icon-link" href="">
-                <svg class="footer-link-social" width="20" height="20">
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="">
+                <svg class="footer-social__icon" width="20" height="20">
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a class="footer-icon-link" href="">
-                <svg class="footer-link-social" width="20" height="20">
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="">
+                <svg class="footer-social__icon" width="20" height="20">
                   <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a class="footer-icon-link" href="">
-                <svg class="footer-link-social" width="20" height="20">
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="">
+                <svg class="footer-social__icon" width="20" height="20">
                   <use href="./images/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -508,16 +508,16 @@
         <!-- футер форма -->
         <form class="footer-form-group " name="footer-form">
           <div class="footer-group">
-            <p class="footer-form-text">Подпишитесь на рассылку</p>
+            <p class="footer-group__text">Подпишитесь на рассылку</p>
             <label>
               <input
-                class="footer-mail-group"
+                class="footer-group__mail"
                 type="email"
                 name="email"
                 placeholder="E-mail"
               />
             </label>
-            <button class="footer-btn" type="submit">Подписаться</button>
+            <button class="footer-group__btn" type="submit">Подписаться</button>
           </div>
         </form>
       </div>
